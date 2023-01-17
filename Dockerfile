@@ -8,7 +8,12 @@ WORKDIR /app
 COPY ["package.json", "package-lock.json*", "./"]
 
 #Install npm
-RUN npm install
+RUN npm init
+RUN npm install express
+RUN npm i multer
+RUN npm install mysql
+RUN npm install dotenv
+RUN npm install @aws-sdk/client-s3
 
 # Bundle app source
 COPY . .
