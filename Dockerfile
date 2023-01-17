@@ -1,8 +1,10 @@
 # Set the baseImage
-FROM node:13.8.0
+FROM node:18.13.0
 
 # Set the working directory
 WORKDIR /app
+
+#Remember to set the ENV
 
 # Copy files from source 
 COPY ["package.json", "package-lock.json*", "./"]
@@ -12,4 +14,6 @@ RUN npm install
 
 # Bundle app source
 COPY . .
+
+EXPOSE 3000
 CMD [ "node", "app.js" ]

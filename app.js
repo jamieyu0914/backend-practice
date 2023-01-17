@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = 3000;
 app.use(express.static("public"));
 
 require("dotenv").config();
@@ -50,13 +51,17 @@ app.post("/upload", upload.single("image"), async (requests, responses) => {
   await s3.send(command);
 
   pool.getConnection((error, connection) => {
-    if (error) throw error;
+    if (error == true) {
+      throw error;
+    }
     console.log("MySQL connection is opened");
 
     const sql = "INSERT INTO chat_list (content, image) VALUES (?)";
     const val = [contenttext, imagename];
     connection.query(sql, [val], (error) => {
-      if (error) throw error;
+      if (error == true) {
+        throw error;
+      }
       responses.status(200).send({ ok: true });
     });
     connection.release();
@@ -84,6 +89,6 @@ app.get("/upload", (requests, responses) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`Running on http://0.0.0.0:3000`);
+app.listen(port, () => {
+  console.log(`Running on http://0.0.0.0:${port}`);
 });
