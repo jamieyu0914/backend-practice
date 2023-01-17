@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/CSS/layout.css" />
+    <title>Backend-practice</title>
+  </head>
+  <body>
+    <div id="banner">
+      <h2>發表一篇圖文</h2>
+      <form id="form">
+        <div id="contentdiv">
+          <label for="content">文字內容</label>
+          <input
+            type="text"
+            class="content"
+            id="content"
+            name="content"
+            placeholder="請輸入文字內容"
+            required
+          />
+        </div>
+        <div id="imagediv">
+          <label for="image">圖片檔案</label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            accept="image/*"
+            required
+          />
+        </div>
+        <div><button type="submit" id="submit">送出</button></div>
+      </form>
+    </div>
+    <div id="contents">
+      <div id="loading">
+        <text>isloading...</text>
+      </div>
+    </div>
+  </body>
+  <script src="/JS/upload.js"></script>
+</html>
