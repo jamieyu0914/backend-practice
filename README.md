@@ -6,7 +6,9 @@ This is backend-practice of WeHelp Stage3.
 - Framework: Node.js Express
 - Interact with AWS S3 for Node.js by @aws-sdk/client-s3.
 - Insert images' and messages' data into table with MySQL.
-- Use AWS S3 bucket to storage the uploaded images from users. Reducing network latency and load times by AWS CloudFront. Configuring the Nginx to support - the HTTPS protocol.
+- Use AWS S3 bucket to storage the uploaded images from users. 
+- Reducing network latency and load times by AWS CloudFront.
+- Configuring the Nginx to support the HTTPS protocol.
 - Adapt different screen sizes and devices within RWD.
 - Separate concerns into Model, View, and Controller(MVC) in the frontend of JavaScript development.
 
