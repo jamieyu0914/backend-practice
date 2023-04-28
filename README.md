@@ -1,7 +1,7 @@
 #  Message Board
 ###  A website where everyone can update picture and leave message for other people to read.
 
-https://backend-practice.jamiexyu.com
+~~https://backend-practice.jamiexyu.com~~
 
 ![image](https://user-images.githubusercontent.com/43780809/224297668-5f8f47bf-8ab3-42f6-808b-5a3ad32eabe5.png)
 
